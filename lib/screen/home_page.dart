@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_dropdown_with_search/example/basic_example.dart';
 import 'package:smooth_dropdown_with_search/example/image_example.dart';
+import 'package:smooth_dropdown_with_search/example/styled_example.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -43,6 +44,21 @@ class MyApp extends StatelessWidget {
                       () => Navigator.push(
                         innerCtx,
                         MaterialPageRoute(builder: (_) => const ImageExample()),
+                      ),
+                    );
+                  },
+                ),
+                Builder(
+                  builder: (innerCtx) {
+                    return _buildExampleCard(
+                      innerCtx,
+                      'With Images',
+                      'Dropdown with image support',
+                      () => Navigator.push(
+                        innerCtx,
+                        MaterialPageRoute(
+                          builder: (_) => const StyledExample(),
+                        ),
                       ),
                     );
                   },
