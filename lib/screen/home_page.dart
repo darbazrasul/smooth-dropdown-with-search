@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_dropdown_with_search/example/basic_example.dart';
 import 'package:smooth_dropdown_with_search/example/image_example.dart';
+import 'package:smooth_dropdown_with_search/example/loading_example.dart';
 import 'package:smooth_dropdown_with_search/example/multi_select_example.dart';
 import 'package:smooth_dropdown_with_search/example/styled_example.dart';
 import 'package:smooth_dropdown_with_search/example/custom_object_example.dart';
@@ -90,6 +91,21 @@ class MyApp extends StatelessWidget {
                         innerCtx,
                         MaterialPageRoute(
                           builder: (_) => const CustomObjectExample(),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                Builder(
+                  builder: (innerCtx) {
+                    return _buildExampleCard(
+                      innerCtx,
+                      'Loading State',
+                      'Async data loading',
+                      () => Navigator.push(
+                        innerCtx,
+                        MaterialPageRoute(
+                          builder: (_) => const LoadingExample(),
                         ),
                       ),
                     );
